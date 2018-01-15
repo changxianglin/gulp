@@ -1,0 +1,24 @@
+{
+  "name": "gulpapp",
+  "version": "1.0.0",
+  "description": "gulp to build FE files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/changxianglin/gulp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/changxianglin/gulp/issues"
+  },
+  "homepage": "https://github.com/changxianglin/gulp#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}
