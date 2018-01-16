@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>this is a first page</h1>
+<button class="btn1">button01</button>
+<button class="btn2">button02</button>
+<button class="btn3">button03</button>
+<button class="btn4">button04</button>
+<button class="btn5">button05</button>
+<script>
+    var btnEvent = function(element, callback) {
+        var btnsite = document.querySelector(element)
+        btnsite.addEventListener('click', callback)
+    }
+    var xhrEvent = function(method, url) {
+        console.log('click')
+        var xmlhttp = new XMLHttpRequest()
+
+        xmlhttp.onreadystatechange=function() {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+                console.log(xmlhttp.response)
+            }
+        }
+        xmlhttp.open(method, url);
+        xmlhttp.send();
+    }
+
+    btnEvent('.btn1', function(){
+        var xmlhttp = new XMLHttpRequest()
+
+        xmlhttp.onreadystatechange=function() {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+                console.log(xmlhttp.response)
+            }
+        }
+        xmlhttp.open("GET", '/user');
+        xmlhttp.send();
+    })
+
+    btnEvent('.btn2', function() {
+        var xmlhttp = new XMLHttpRequest()
+
+        xmlhttp.onreadystatechange=function() {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+                console.log(xmlhttp.response)
+            }
+        }
+        xmlhttp.open("GET", '/user');
+        xmlhttp.send();
+    })
+    btnEvent('.btn3', function() {
+        var xmlhttp = new XMLHttpRequest()
+
+        xmlhttp.onreadystatechange=function() {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+                console.log(xmlhttp.response)
+            }
+        }
+        xmlhttp.open("PUT", '/user');
+        xmlhttp.send();
+    })
+    btnEvent('.btn4', function() {
+        var xmlhttp = new XMLHttpRequest()
+
+        xmlhttp.onreadystatechange=function() {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+                console.log(xmlhttp.response)
+            }
+        }
+        xmlhttp.open("POST", '/user');
+        xmlhttp.send();
+    })
+    btnEvent('.btn5', function() {
+        var xmlhttp = new XMLHttpRequest()
+
+        xmlhttp.onreadystatechange=function() {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+                console.log(xmlhttp.response)
+            }
+        }
+        xmlhttp.open("GET", '/user/about');
+        xmlhttp.send();
+    })
+</script>
+</body>
+</html>
