@@ -1,0 +1,14 @@
+h3 {
+  color: lightblue;
+  line-height: 16px;
+}
+
+h5 {
+  color: pink;
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
